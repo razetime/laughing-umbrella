@@ -7,12 +7,14 @@ Jokes aside, this is a golfing language that I made a concept for in a desperate
 Laughing Umbrella's quite a huge name, so let's call it LU for short.
 
 ## Paradigm
-For now i definitely don't want this to be stack based. So I chose the Splay tree as the primary storage method for now.
+For now i definitely don't want this to be stack based. So I chose a binary tree as the primary storage method for now.
 
-The problems i need to solve now are:
-- How to access arbitrarily deep elements
-- What comparison method the tree will use
-- how tree elements are consumed as the program executes
+### Problems and their solutions:
+**How to access arbitrarily deep elements:** 
+You can move elements around performing a left or right rotation on a given node. Eventually with enough rotations you can get to a required nodes.
+
+**How tree elements are consumed as the program executes:**
+each command consumes its arguments from the lowest depth nodes of the tree, from left to right.
 
 The programs will be in a concatenative style, single char per command unless something else really strikes me as cool.
 
